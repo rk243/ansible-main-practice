@@ -13,9 +13,9 @@
 
 - name: start and enable service
   ansible.builtin.service:
-    - name: mysqld
-      state: started
-      enabled: yes
+    name: mysqld
+    state: started
+    enabled: yes
 
 
 - name: check db connections
