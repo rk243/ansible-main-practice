@@ -1,0 +1,5 @@
+- name: configure db server
+  hosts: frontend
+  become: yes
+  roles:
+  - frontend
