@@ -17,11 +17,15 @@
     name: expense
 
 - name: run common app
+  tags:
+  - deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: app-pre-req
 
 - name: npm install
+  tags:
+  - deployment
   ansible.builtin.command: npm install
   args:
     chdir: /app
@@ -36,6 +40,8 @@
     daemon_reload: yes
    
 - name: restart and enabled service
+  tags:
+  - deployment
   ansible.builtin.service:
     name: backend
     state: started
