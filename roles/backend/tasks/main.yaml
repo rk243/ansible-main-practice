@@ -34,8 +34,8 @@
 
 - name: npm install
   ansible.builtin.command: npm install
-    args:
-      chdir: /app
+  args:
+    chdir: /app
 
 - name: copied backendsevice.js
   ansible.builtin.templates:
